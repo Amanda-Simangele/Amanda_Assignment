@@ -13,11 +13,11 @@ public class CountriesAPI {
 
         given().
                 when().
-                get("/independent?status=true").
+                get("/currency/rand").
                 then().
                 assertThat().
                 statusCode(200).
-                body(JsonSchemaValidator.matchesJsonSchemaInClasspath("Schema/Schema.json"));
+                body(JsonSchemaValidator.matchesJsonSchemaInClasspath("Schema/Africa.json"));
 
         System.out.println("✅ API schema validation test passed.");
     }
